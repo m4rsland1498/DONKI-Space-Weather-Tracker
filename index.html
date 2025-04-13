@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <head>
-    <title>DONKI Space Weather Tracker</title>
+    <title>NASA Open APIs Hub</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <script src="config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--Loads chart.js depdendencies-->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script> <!--Loads date-handling dependencies-->
-    <h1>DONKI Space Weather Tracker</h1>
+    
+    <h1>NASA Open APIs Hub</h1>
+
+    <div class="DONKIdiv">
+        <h2>Astronomy Picture OD of the Past 3 Days (APOD)</h2>
+        <div id="APODdiv"></div>
+        <script src="APOD.js"></script>
+        <p>two days ago <---> yesterday <---> today</p>
+    </div>
+
     <div class="DONKIdiv">    
-        <h2>Solar Flare (FLR)</h2>
+        <h2>Solar Flare (DONKI)</h2>
         <h4>Default: Past 30 days</h4>
         From: <input type="date" id="FLRfrom">
         To: <input type="date" id="FLRto">
@@ -21,7 +31,7 @@
     </div>
 
     <div class="DONKIdiv" style="background-color: black; color: white;">
-        <h2>Interplanetary Shock (IPS)</h2>
+        <h2>Interplanetary Shock (DONKI)</h2>
         <h3>(Earth, Mars, Messenger, STEREO A, STEREO B)</h3>
         <h4>Default: Past 30 days</h4>
         From: <input type="date" id="IPSfrom">
