@@ -1,0 +1,48 @@
+.IPSimages {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .IPSimages div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+.IPSimages img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+#sfScatter {
+    width: 400px;
+    height:264px;
+  }
+
+h1 {
+    color: white;
+    background: black;
+}
+
+.DONKIdiv {
+    background-color: rgb(223, 223, 223);
+}
+
+.location {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}

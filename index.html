@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>DONKI Space Weather Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--Loads chart.js depdendencies-->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script> <!--Loads date-handling dependencies-->
+    <h1>DONKI Space Weather Tracker</h1>
+    <div class="DONKIdiv">    
+        <h2>Solar Flare (FLR)</h2>
+        From: <input type="date" id="FLRfrom">
+        To: <input type="date" id="FLRto">
+        <div>
+            <canvas id="sfScatter"></canvas>
+        </div>
+
+        <script src="FLR.js"></script> <!--Loads script for solar flare chart-->
+    </div>
+
+    <div class="DONKIdiv" style="background-color: black; color: white;">
+        <h2>Interplanetary Shock (IPS)</h2>
+        <h3>(Earth, Mars, Messenger, Stereo A, Stereo B)</h3>
+        From: <input type="date" id="IPSfrom">
+        To: <input type="date" id="IPSto">
+        <p></p>
+        <div class="IPSimages">
+            <div class="location">
+                <img src="earth.png">
+                <div class="centered" id="earth">0</div>
+            </div>
+            <div class="location">
+                <img src="mars.png">
+                <div class="centered" id="mars">0</div>
+            </div>
+            <div class="location">
+                <img src="messenger.png">
+                <div class="centered" id="messenger">0</div>
+            </div>
+            <div class="location">
+                <img src="stereoA.png">
+                <div class="centered" id="stereoa">0</div>
+            </div>
+            <div class="location">
+                <img src="stereoB.png">
+                <div class="centered" id="stereob">0</div>
+            </div>
+        </div>
+        <script src="IPS.js"></script> <!--Loads script for IPS chart-->
+    </div>
+</body>
